@@ -1,0 +1,43 @@
+DATA:
+    ROOT: '/home/ouyangjun/workspace/data/a/workspace/kinetics-400/OpenMMLab___Kinetics-400/raw/Kinetics-400/videos_val/'
+    TRAIN_FILE: '/home/ouyangjun/workspace/data/a/songhao/BDC-CLIP-main/datasets_splits/base2novel_splits/k400_splits/k400_base_train_clean.txt'
+    VAL_FILE: '/home/ouyangjun/workspace/data/a/songhao/BDC-CLIP-main/datasets_splits/base2novel_splits/k400_splits/k400_novel_val_clean.txt'
+    DATASET: k400
+    NUM_FRAMES: 32
+    NUM_CLASSES: 200
+    LABEL_LIST: '/home/ouyangjun/workspace/data/a/songhao/BDC-CLIP-main/labels/kinetics_400_novel_labels.csv'
+    LLM_JSON: '/home/ouyangjun/workspace/data/a/songhao/BDC-CLIP-main/prompts/K400/k400.json'
+
+MODEL:
+    ARCH: ViT-B/16
+    DIM: 512
+    # Prompt configuration (set to 0 to disable prompts)
+    VISION_DEPTH: 9       # Number of layers with visual prompts (0=disable)
+    LANGUAGE_DEPTH: 9     # Number of layers with text prompts (0=disable)
+    VISION_CTX: 8         # Number of visual prompt tokens per layer
+    LANGUAGE_CTX: 8       # Number of text prompt tokens per layer
+
+TRAINER:
+    PROMPT_MODE: True    # Enable parameter-efficient prompt tuning mode
+
+TRAIN:
+    IS_PRETRAIN: False
+    BATCH_SIZE: 2 # BS 64
+    ACCUMULATION_STEPS: 8
+    EPOCHS: 12
+    LR: 2e-06
+    LR_HEAD: 4e-04
+    LR_ADAPTER: 4e-04
+    DROPOUT_RATE: 0.8
+    REDUCE_DIM: 192
+    VAL: False
+    WARMUP_EPOCHS: 2
+
+TEST:
+    TYPE: "FEWSHOT_VAL"
+    COEF_BB: 1.0
+    COEF_VIS: 0.0
+    COEF_VL: 0.0
+    SCALE: 5.0
+
+SAVE_FREQ: 10  

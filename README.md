@@ -102,7 +102,7 @@ Please follow the instructions provide by [ViFiCLIP](https://github.com/muzairkh
     <td align="center">74.3</td>
     <td align="center">76.2</td>
     <td align="center">
-      <a href="...">Baiduyun</a>
+      <a href="https://pan.baidu.com/s/1nVOt_h7mRPtmhFbPcKomXg?pwd=rvjd">Baiduyun</a>
     </td>
   </tr>
   <tr>
@@ -112,7 +112,7 @@ Please follow the instructions provide by [ViFiCLIP](https://github.com/muzairkh
     <td align="center">96.7</td>
     <td align="center">97.3</td>
     <td align="center">
-      <a href="...">Baiduyun</a>
+      <a href="https://pan.baidu.com/s/1ZkYIMlfL5zTHu0qLvWoL0w?pwd=9cbe">Baiduyun</a>
     </td>
   </tr>
   <tr>
@@ -122,7 +122,7 @@ Please follow the instructions provide by [ViFiCLIP](https://github.com/muzairkh
     <td align="center">13.3</td>
     <td align="center">18.5</td>
     <td align="center">
-      <a href="...">Baiduyun</a>
+      <a href="https://pan.baidu.com/s/1TTExXmYnwF49gIeWWyb0gA?pwd=vrtq">Baiduyun</a>
     </td>
   </tr>
 </tbody>
@@ -147,11 +147,11 @@ Please follow the instructions provide by [ViFiCLIP](https://github.com/muzairkh
     <tr>
       <td align="center"><b>94.0</b></td>
       <td align="center">
-        <a href="...">Baiduyun</a>
+        <a href="https://pan.baidu.com/s/1XunV27lkm1xcU2-fUe1NBQ?pwd=g2ju">Baiduyun</a>
       </td>
       <td align="center"><b>95.6</b></td>
       <td align="center">
-        <a href="...">Baiduyun</a>
+        <a href="https://pan.baidu.com/s/1DDA2dax8Qfg1zAIlSRsi1g?pwd=fbdq">Baiduyun</a>
       </td>
     </tr>
   </tbody>

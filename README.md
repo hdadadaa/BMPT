@@ -19,7 +19,10 @@ Supported datasets:
 * HMDB-51
 * Something-Something V2
 ```
-Please follow the instructions provide by [ViFiCLIP](https://github.com/muzairkhattak/ViFi-CLIP)  for data preparation.
+Please follow the instructions provided by [ViFi-CLIP](https://github.com/muzairkhattak/ViFi-CLIP) for data preparation.  
+The knowledge features required for each dataset are stored in the `./knowledge` directory.  
+In particular, the extracted knowledge features for the SSv2 dataset can be downloaded from the following link: **https://pan.baidu.com/s/1_EiaMV3xAxYwy3-WjYlsag?pwd=fn6d**.
+
 
 # Model Zoo
 <p><b>NOTE:</b> All models in our experiments below use the publicly available ViT/B-16 based CLIP model pretrained on Kinetics-400. The pretrained weights are available at the following links:</p>

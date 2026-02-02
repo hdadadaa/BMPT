@@ -1,5 +1,5 @@
 DATA:
-    ROOT: '/home/ouyangjun/workspace/data/a/songhao/ViFi-CLIP/videos/hmdb51_new/'
+    ROOT: ''
     TRAIN_FILE: 'datasets_splits/base2novel_splits/hmdb_splits/fs_base_s1_train.txt'
     VAL_FILE: 'datasets_splits/base2novel_splits/hmdb_splits/novel_val.txt'
     DATASET: hmdb51
@@ -14,8 +14,8 @@ MODEL:
     # Prompt configuration (set to 0 to disable prompts)
     VISION_DEPTH: 0       # Number of layers with visual prompts (0=disable)
     LANGUAGE_DEPTH: 0     # Number of layers with text prompts (0=disable)
-    VISION_CTX: 4         # Number of visual prompt tokens per layer
-    LANGUAGE_CTX: 4       # Number of text prompt tokens per layer
+    VISION_CTX: 0         # Number of visual prompt tokens per layer
+    LANGUAGE_CTX: 0      # Number of text prompt tokens per layer
 
 TRAINER:
     PROMPT_MODE: False    # Enable parameter-efficient prompt tuning mode
@@ -36,8 +36,6 @@ TRAIN:
 TEST:
     TYPE: "ZEROSHOT_VAL"
     COEF_BB: 1.0
-    COEF_VIS: 0.0
-    COEF_VL: 0.0
     SCALE: 5.0
 
 SAVE_FREQ: 10  

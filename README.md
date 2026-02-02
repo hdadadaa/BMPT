@@ -22,7 +22,12 @@ Supported datasets:
 Please follow the instructions provide by [ViFiCLIP](https://github.com/muzairkhattak/ViFi-CLIP)  for data preparation.
 
 # Model Zoo
-NOTE: All models in our experiments below uses publicly available ViT/B-16 based CLIP model and Pretrained on Kinetics-400
+<p><b>NOTE:</b> All models in our experiments below use the publicly available ViT/B-16 based CLIP model pretrained on Kinetics-400. The pretrained weights are available at the following links:</p>
+
+<ul>
+  <li><a href="https://pan.baidu.com/s/...">Baiduyun</a></li>
+</ul>
+
 
 ### 🔬 Base-to-novel generalization results
 <h3>

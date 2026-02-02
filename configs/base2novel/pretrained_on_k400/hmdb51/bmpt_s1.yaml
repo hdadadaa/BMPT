@@ -1,5 +1,5 @@
 DATA:
-    ROOT: '/home/ouyangjun/workspace/data/a/songhao/ViFi-CLIP/videos/hmdb51_new/'
+    ROOT: ''
     TRAIN_FILE: 'datasets_splits/base2novel_splits/hmdb_splits/fs_base_s2_train.txt'
     VAL_FILE: 'datasets_splits/base2novel_splits/hmdb_splits/base_val.txt'
     DATASET: hmdb51
@@ -12,8 +12,8 @@ MODEL:
     ARCH: ViT-B/16
     DIM: 512
     # Prompt configuration (set to 0 to disable prompts)
-    VISION_DEPTH: 12       # Number of layers with visual prompts (0=disable)
-    LANGUAGE_DEPTH: 12     # Number of layers with text prompts (0=disable)
+    VISION_DEPTH: 12       # Number of layers with visual prompts 
+    LANGUAGE_DEPTH: 12     # Number of layers with text prompts 
     VISION_CTX: 8         # Number of visual prompt tokens per layer
     LANGUAGE_CTX: 8       # Number of text prompt tokens per layer
 
@@ -25,9 +25,7 @@ TRAIN:
     BATCH_SIZE: 4 # BS 64
     ACCUMULATION_STEPS: 8
     EPOCHS: 12
-    LR: 9e-06
-    LR_HEAD: 4e-04
-    LR_ADAPTER: 4e-04
+    LR: 2e-06
     DROPOUT_RATE: 0.8
     REDUCE_DIM: 192
     VAL: False
@@ -36,8 +34,6 @@ TRAIN:
 TEST:
     TYPE: "FEWSHOT_VAL"
     COEF_BB: 1.0
-    COEF_VIS: 0.0
-    COEF_VL: 0.0
     SCALE: 5.0
 
 SAVE_FREQ: 10  

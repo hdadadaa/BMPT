@@ -23,7 +23,7 @@ def load_clip_to_cpu(cfg):
 
     # Pass prompt configuration and cross-modal interaction settings to CLIP model
     design_details = {
-        "trainer": 'BDC_CLIP',
+        "trainer": 'bmpt',
         "num_frames": cfg.DATA.NUM_FRAMES,
         "vision_depth": cfg.MODEL.get("VISION_DEPTH", 0),  # How many layers to add visual prompts
         "language_depth": cfg.MODEL.get("LANGUAGE_DEPTH", 0),  # How many layers to add text prompts
@@ -167,7 +167,7 @@ class VLPromptLearner(nn.Module):
         return prompts, neg_prompts
 
 
-class BDC_CLIP(nn.Module):
+class bmpt(nn.Module):
     def __init__(self, cfg, classnames, clip_model, logger, neg_classnames=None):
         super().__init__()
         self.prompt_learner = VLPromptLearner(cfg, classnames, clip_model, logger, neg_classnames)
@@ -321,7 +321,7 @@ def returnCLIP(config, logger=None, class_names=None, neg_classnames=None):
     logger.info("Building BDC-CLIP")
     if neg_classnames is not None:
         logger.info(f"Using negative class sampling with {len(neg_classnames)} negative classes")
-    model = BDC_CLIP(config, class_names, clip_model, logger, neg_classnames)
+    model = bmpt(config, class_names, clip_model, logger, neg_classnames)
 
     # Check if prompt mode is enabled
     use_prompt_mode = config.TRAINER.get("PROMPT_MODE", False)

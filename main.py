@@ -28,7 +28,7 @@ from utils.tools import (
 from datasets.build import build_dataloader
 from utils.logger import create_logger
 from datasets.blending import CutmixMixupBlending
-from trainers import bdc_clip
+from trainers import bmpt
 import torch._dynamo as dynamo
 
 knowledge_path = "knowledge/"
@@ -85,7 +85,7 @@ def main(config):
         logger.info("No negative class mapping file found, skipping negative sampling")
 
     # Initialize the model
-    model = bdc_clip.returnCLIP(config, logger=logger, class_names=class_names, neg_classnames=neg_class_names)
+    model = bmpt.returnCLIP(config, logger=logger, class_names=class_names, neg_classnames=neg_class_names)
     model = model.cuda()
 
     # Define loss function and augmentation strategy from config
@@ -413,5 +413,6 @@ if __name__ == '__main__':
     if dist.get_rank() == 0:
         logger.info(config)
         shutil.copy(args.config, config.OUTPUT)
+
 
     main(config)
